@@ -1,0 +1,9 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+Deny from all
+</Files>
+
+AuthType Basic
+AuthName "Basic Auth"
+AuthUserFile /var/www/html/mj-event.net/.htpasswd
+Require valid-user
+

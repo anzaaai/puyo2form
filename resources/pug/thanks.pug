@@ -1,0 +1,46 @@
+extends /_partials/_layout
+block append vars
+    //- ページ個別にメタデータを変更したい場合はここで再設定できます
+    - metas.title = sitetitle
+block append style
+    //- ページ個別にスタイルシートを追加したい場合はここへ記述  
+block append end_of_body
+    //- ページ個別にJsを追加したい場合はここへ記述  
+    .
+        <script>
+        (function(d) {
+            var config = {
+            kitId: 'mda3azw',
+            scriptTimeout: 3000,
+            async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+        </script>
+    link(rel='stylesheet', href='/assets/css/app.css?' + timestamp)
+block contents
+    //- コンテンツ本文
+    .thanks
+        .thanks__wrapper 
+            .thanks__border-wrapper
+                .thanks__title
+                    h3.thanks__title__heading ご応募ありがとうございました
+            .thanks__content
+                .thanks__content__border-wrapper
+                    .thanks__content__detail
+                        p.thanks__lead 「ぷよの日2026 公開生放送 ～ぷよぷよ35周年記念スペシャル～」へのご応募ありがとうございました。
+                            br
+                            | ※当選結果は、2026年1月19日(月)に、当選された方のみにメールにてご連絡いたします。
+                            br
+                            | あらかじめご了承ください。
+                            br
+                            br
+                        p.thanks__lead.form__require ※受付メールが事務局から届かない方は、
+                            b 「@puyoq-sega.jp」
+                            | の受信許可設定をお願いいたします。#[br]
+                        p.thanks__lead.form__require ※お客様のメール受信設定などにより、確認メールと同時刻にエラーメールを受信される場合がございます。#[br]
+                            | エラーメールを受信された場合も、応募は問題なく完了しております。
+                            br
+                            br
+                            p.thanks__lead
+                                a(href="/") TOPに戻る

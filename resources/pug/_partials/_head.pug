@@ -1,0 +1,34 @@
+head
+    //- GoogleAnalytics
+    block meta
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(charset='UTF-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no")
+        
+        // META
+        title #{metas.title}
+        +meta(metas)
+        +inc_meta_ogp(metas)
+        //- favicon
+        +favicon()
+
+    block style
+        // CSS
+        - date = new Date();
+        - y = date.getFullYear();
+        - m = date.getMonth() + 1;
+        - d = date.getDate();
+        - h = date.getHours();
+        - min = date.getMinutes();
+        - s = date.getSeconds();
+
+        - y_str = y.toString();
+        - m_str = m.toString();
+        - d_str = d.toString();
+        - h_str = h.toString();
+        - min_str = min.toString();
+        - s_str = s.toString();
+
+        - timestamp = y_str+m_str+d_str+h_str+min_str+s_str;
+        
+        link(rel='stylesheet', href='assets/css/app.css?' + timestamp)
