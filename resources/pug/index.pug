@@ -25,7 +25,7 @@ block contents
                 | 2026年、『ぷよぷよ』は35周年を迎えます。これを記念し、豪華声優陣をゲストに迎えた特別公開収録#[br]
                 | 「ぷよの日2026 公開生放送 ～ぷよぷよ35周年記念スペシャル～」を、#[br]
                 | ２月１日に東京・大崎ガーデンタワー（セガ本社）にて開催いたします。#[br]
-                | 当日は、35周年記念コーナーをはじめ、生放送恒例の応援会議や生まんざいデモ、#[br]
+                | 当日は、35周年記念スペシャルコーナーをはじめ、生放送恒例の応援会議や生まんざいデモ、#[br]
                 | さらに『ぷよクエ』最新情報など盛りだくさんの内容でお届けします。#[br]
                 | 皆さまのご応募を心よりお待ちしております。#[br]
                 | #[br]
@@ -38,7 +38,7 @@ block contents
             dl.cmn__table-list
                 dt.cmn__table-tit 開催日時
                 dd.cmn__table-txt 2026年2月1日(日)#[br]
-                    | ※ 開場 13:30 /公開放送14:30～17:00（予定）#[br]
+                    | ※ 開場：13時30分 / 開演：14時30分（予定）#[br]
                     | ※イベントは、130分程度を予定しております。
             dl.cmn__table-list
                 dt.cmn__table-tit 会場
@@ -80,7 +80,7 @@ block contents
                     p ※ご応募いただいたお客様より抽選でご招待します。
                     p ※応募完了後の取り消し変更はできません。
                     p ※応募は1名様につき1回までとさせていただきます。また、当選後、参加権利の譲渡は禁止とさせていただきます。
-                    p ※当選結果は2026年1月19日(月)に、当選された方のみにメールにてご連絡いたします。
+                    p ※ご当選されたお客様には、1月下旬から順次ご入力いただいたメールアドレス宛に当選のご案内をお送りいたします。
 
         h2.cmn__heading 応募規約
 
@@ -141,7 +141,7 @@ block contents
             .app__form
 
                 //- Google フォーム（formタグで直接埋め込み）
-                form.google-form(action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdpPCR9phUaEdCoXeK7JiiLvlKte3PFVkn6OXstlXWsNDks2g/formResponse" method="POST" target="hidden_iframe" id="custom-form")
+                form.google-form(action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdOfS1syN95yL-JbKao9Jz71fjEJdG95lBW0JE0H8rh8om3cQ/formResponse" method="POST" target="hidden_iframe" id="custom-form")
                     //- 希望人数
                     .form__column
                         dt.form__head
@@ -207,7 +207,9 @@ block contents
                                 .radiowrapper
                                     input#guardian_yes(type="radio" name="entry.1277287039" value="保護者の同意あり" required)
                                     label(for="guardian_yes") 保護者の同意あり
-
+                                .radiowrapper
+                                    input#guardian_no(type="radio" name="entry.1277287039" value="18歳未満の未成年を含まない" required)
+                                    label(for="guardian_no") 18歳未満の未成年を含まない
                     //- 都道府県
                     .form__column
                         dt.form__head
@@ -271,7 +273,7 @@ block contents
                             span.form__require ※
                             | メールアドレス
                         dd.form__input
-                            input.label1(type="email" name="entry.1360253886" placeholder="メールアドレス" required)
+                            input.label1(type="email" name="entry.2069028815" placeholder="メールアドレス" required)
 
                     //- 連絡先電話番号
                     .form__column
